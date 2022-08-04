@@ -145,3 +145,9 @@ html, body , .container {
       padding: 0.25em 0.75em;
     }
   }
+
+@media (max-width:376px){
+  .container{
+    margin:0px;
+  }
+}
