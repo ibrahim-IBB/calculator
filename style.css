@@ -1,153 +1,141 @@
+
+*{
+  box-sizing: border-box;
+}
+
 body{
-  background-color: rgb(255 53 53);
+  background-color: orange;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
-    gap: 10px 10px;
-    grid-auto-flow: row;
-    grid-template-areas:
-    "result result result clear"
-    "number1 number2 number3 plus"
-    "number4 number5 number6 multiple"
-    "number7 number8 number9 divide"
-    "number0 sign dot resulting";
-    width:90%;
-    margin: 10px auto;
-    font-size: 40px;
-    }
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin:0 130px;
   
-  .result {
-    grid-area: result;
-    width:100%;
-    /* height: 100%; */
-    border: 1px solid black;
 }
 
-.clear { grid-area: clear;
+
+
+.container div{
+
+  min-height: 70px;
+  font-size: 24px;
+  margin: 2px;
 }
 
-  .number1 { grid-area: number1;
-}
-  
-  .number2 { grid-area: number2; }
-  
-  .number3 { grid-area: number3; }
-  
-  .number4 { grid-area: number4; }
-  
-  .number5 { grid-area: number5; }
-  
-  .number6 { grid-area: number6; }
-  
-  .number7 { grid-area: number7; }
-  
-  .number8 { grid-area: number8; }
-  
-  .number9 { grid-area: number9; }
-  
-  .number0 { grid-area: number0; }
-  
-  .plus { grid-area: plus; }
-  
-  .multiple { grid-area: multiple; }
-  
-  .divide { grid-area: divide; }
-  
-  .resulting { grid-area: resulting;
-   
-  }
-  
-  .dot { grid-area: dot; }
-  
-  .sign { grid-area: sign; }
-  
+.container div button{
 
-button{
-    width:100%;
-    height: 100%;
     font-size: 30px;
+    width: 100%;
+    height: 100%;
+    border:3px solid black;
+  
 }
 
 
-html, body , .container {
-    height: 98%;
-    font-size: 44px;
-    width: 90%;
-    margin: auto;
-    padding: a;
-  }
+
+.result{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border:3px solid black;
+  transition: 0.1s ;
+  overflow-x: hidden;
+  
+}
+
+.btn{
+  transition: 0.1s ;
+}
+
+.btn:hover{
+  background-color: rgba(0, 0, 0, 0.075);
+}
+.btn:active{
+  background-color: rgba(0, 0, 0, 0.318);
+}
 
 
+.result:hover{
+  background-color: rgba(0, 0, 0, 0.075);
+}
+.result:active{
+  background-color: rgba(0, 0, 0, 0.318);
+}
+
+.sign{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+/* media query*/
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
   /* CSS */
-  button {
-    font-family: "Open Sans", sans-serif;
-    font-size: 40px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #000;
-    cursor: pointer;
-    border: 6px solid;
-    padding: 0.25em 0.5em;
-    box-shadow: 4px 2px 0px 0px, 2px 2px 0px 0px, 3px 4px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    position: relative;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
   
-#Result{
-  margin-top: 34px;
-  margin-left: 9px;
 }
 
-  #res_container {
-    z-index: 1;
-    font-family: "Open Sans", sans-serif;
-    font-size: 40px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: 99.5%;
-    justify-items: self-start;
-    border-radius: 6px;
-    border: 3px solid;
-    box-shadow: 1px 2px 0px 0px, 2px 2px 0px 0px, 3px 4px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    position: relative;
-    user-select: none;
-    /* padding: 8px; */
-    text-align-last: left;
-    /* text-align: start; */
-    background-color: white;
-    transition:0.2s;
-  }
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
 
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* CSS */
+  
+}
 
-  #res_container:active {
-    box-shadow: 0px 0px 0px 0px;
-    top: 5px;
-    left: 5px;
-    background-color: rgb(255 53 53);
-  }
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  /* CSS */
+  
+}
 
-  button:active {
-    box-shadow: 0px 0px 0px 0px;
-    top: 5px;
-    left: 5px;
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* CSS */
+
+  .container{
+    margin: 0 30px;
   }
   
-  @media (min-width: 768px) {
-    .button-54 {
-      padding: 0.25em 0.75em;
-    }
-  }
+}
 
-@media (max-width:376px){
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
   .container{
-    margin:0px;
+    margin: 0;
   }
 }
