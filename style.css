@@ -40,9 +40,13 @@ body{
   border:3px solid black;
   transition: 0.1s ;
   overflow-x: hidden;
-  
-}
 
+}
+#Result{
+  display: flex;
+  align-items: center;
+
+}
 .btn{
   transition: 0.1s ;
 }
